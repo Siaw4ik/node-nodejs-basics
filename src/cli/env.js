@@ -3,7 +3,6 @@ const parseEnv = () => {
   const arr = [];
   for (const [name, value] of Object.entries(process.env)) {
     if (name.startsWith(prefix)) {
-      const variableName = name.slice(prefix.length);
       arr.push(`${name}=${value}`)
     }
   }
